@@ -4,6 +4,11 @@ param appServiceAppName string = 'toylaunch${uniqueString(resourceGroup().id)}'
 
 var appServicePlanName = 'toy-product-launch-plan'
 
+@allowed([
+  'nonprod'
+  'prod'
+])
+param environmentType string
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   name: storageAccountName
