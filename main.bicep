@@ -4,6 +4,9 @@ param appServiceAppName string = 'toylaunch${uniqueString(resourceGroup().id)}'
 
 var appServicePlanName = 'toy-product-launch-plan'
 
+var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
+var appServicePlanSkuName = (environmentType == 'prod') ? 'P2v3' : 'F1'
+
 @allowed([
   'nonprod'
   'prod'
@@ -14,7 +17,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   name: storageAccountName
   location: location
   sku: {
-    name: 'Standard_LRS'
+    name: storageAccountSkuName
   }
   kind: 'StorageV2'
   properties: {
@@ -26,7 +29,7 @@ resource appServicePlan 'Microsoft.Web/serverFarms@2021-03-01' = {
   name: appServicePlanName
   location: location
   sku: {
-    name: 'F1'
+    name: appServicePlanSkuName
   }
 }
 
