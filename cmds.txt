@@ -1,3 +1,4 @@
+https://docs.microsoft.com/en-us/learn/modules/build-first-bicep-template/8-exercise-refactor-template-modules?pivots=cli
 az login
 
 
