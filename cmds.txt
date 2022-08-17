@@ -14,3 +14,8 @@ az account list \
 az account set --subscription {your subscription ID}
 
 az configure --defaults group=learn-57fe0953-b03b-4de4-bb11-0b0e91cff516
+
+
+win admin
+bicepuser
+Admin123admin
