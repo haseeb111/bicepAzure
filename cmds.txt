@@ -1,4 +1,12 @@
 https://docs.microsoft.com/en-us/learn/modules/build-first-bicep-template/8-exercise-refactor-template-modules?pivots=cli
+https://docs.microsoft.com/en-us/learn/modules/build-reusable-bicep-templates-parameters/5-how-secure-parameter
+@secure()
+param sqlServerAdministratorLogin string
+
+@secure()
+param sqlServerAdministratorPassword string
+
+
 az login
 
 
