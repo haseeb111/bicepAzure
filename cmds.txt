@@ -25,6 +25,12 @@ az account set --subscription {your subscription ID}
 az configure --defaults group=learn-57fe0953-b03b-4de4-bb11-0b0e91cff516
 
 
+<<<<<<< HEAD
 az deployment group create \
   --template-file main.bicep \
   --parameters environmentType=nonprod
+=======
+win admin
+bicepuser
+Admin123admin
+>>>>>>> 2f5a9a7c9c4a0bcb691cfd8cbc229642e7f4cd05
