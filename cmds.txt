@@ -19,10 +19,21 @@ az account list \
    --query "[?contains(name, 'Concierge Subscription')].id" \
    --output table
 
+az account list --refresh --query "[?contains(name, 'Concierge Subscription')].id" --output table
 
 az account set --subscription {your subscription ID}
 
 az configure --defaults group=learn-57fe0953-b03b-4de4-bb11-0b0e91cff516
+
+New-AzResourceGroupDeployment -TemplateFile main.bicep -TemplateParameterFile main.parameters.dev.json
+
+
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+Register-PSRepository -Default -Verbose
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+
+
 
 
 <<<<<<< HEAD
