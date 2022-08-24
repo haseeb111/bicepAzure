@@ -4,7 +4,6 @@
   'test'
   'prod'
 ])
-
 param environmentName string = 'dev'
 
 @description('The unique name of the solution. This is used to ensure that resource names are unique.')
