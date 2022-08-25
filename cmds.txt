@@ -34,6 +34,9 @@ az account set --subscription {your subscription ID}
 
 az configure --defaults group=learn-57fe0953-b03b-4de4-bb11-0b0e91cff516
 
+bicepuser
+Abc123abc@
+
 New-AzResourceGroupDeployment -TemplateFile main.bicep -TemplateParameterFile main.parameters.dev.json
 
 
